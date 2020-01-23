@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/images/button-background.png" type="Texture" id=1]
+[ext_resource path="res://controls/GameButton.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/Montserrat-Medium.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/images/logo-menu.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 3 )
+
+[node name="GameButton" type="TextureButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -440.0
+margin_bottom = -824.0
+rect_min_size = Vector2( 200, 200 )
+focus_mode = 0
+texture_normal = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="QuizText" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "#####"
+align = 1
+valign = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="QuizImage" type="TextureRect" parent="MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 195.0
+margin_bottom = 195.0
+rect_min_size = Vector2( 190, 190 )
+mouse_filter = 2
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+[connection signal="pressed" from="." to="." method="_on_GameButton_pressed"]

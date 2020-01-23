@@ -18,6 +18,8 @@ script = ExtResource( 1 )
 [node name="Results" parent="." instance=ExtResource( 4 )]
 
 [node name="Game" parent="." instance=ExtResource( 5 )]
+manyKeys = false
+isUpper = true
 [connection signal="play_clicked" from="Menu" to="." method="_on_Menu_play_clicked"]
 [connection signal="quit_clicked" from="Menu" to="." method="_on_Menu_quit_clicked"]
 [connection signal="settings_clicked" from="Menu" to="." method="_on_Menu_settings_clicked"]

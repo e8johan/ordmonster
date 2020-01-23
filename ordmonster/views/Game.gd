@@ -66,6 +66,7 @@ func _set_many_keys(value : bool) -> void:
     
 func _set_is_upper(value : bool) -> void:
     isUpper = value
+    $MarginContainer/VBoxContainer/Control/TargetButton.isUpper = value
     $MarginContainer/VBoxContainer/KeyboardContainer/Keyboard2x2.isUpper = value
     $MarginContainer/VBoxContainer/KeyboardContainer/Keyboard3x3.isUpper = value
 

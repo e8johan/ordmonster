@@ -25,7 +25,7 @@ custom_constants/separation = 30
 margin_right = 640.0
 margin_bottom = 89.0
 custom_fonts/font = ExtResource( 2 )
-text = "Results"
+text = "MENU_RESULTS"
 align = 1
 
 [node name="SpacerControl" type="Control" parent="MarginContainer/VBoxContainer"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/seven.png-5b95c5f6c5ed02d4fd27e8576f5cc18b.stex"
+path="res://.import/mus.png-6874eefbcdb6bf63c54002ff5f543948.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/words/seven.png"
-dest_files=[ "res://.import/seven.png-5b95c5f6c5ed02d4fd27e8576f5cc18b.stex" ]
+source_file="res://assets/images/words/mus.png"
+dest_files=[ "res://.import/mus.png-6874eefbcdb6bf63c54002ff5f543948.stex" ]
 
 [params]
 

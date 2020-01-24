@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/two.png-d4ac169d5e627838961fdefb56f42e56.stex"
+path="res://.import/får.png-6e82c234271cfc726ceedb0aab74f908.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/words/two.png"
-dest_files=[ "res://.import/two.png-d4ac169d5e627838961fdefb56f42e56.stex" ]
+source_file="res://assets/images/words/får.png"
+dest_files=[ "res://.import/får.png-6e82c234271cfc726ceedb0aab74f908.stex" ]
 
 [params]
 

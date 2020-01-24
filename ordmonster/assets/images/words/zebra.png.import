@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/six.png-854392181c959bf6f09b164bd4265cbc.stex"
+path="res://.import/zebra.png-891153b2ff1279f980886dd1474c2f62.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/words/six.png"
-dest_files=[ "res://.import/six.png-854392181c959bf6f09b164bd4265cbc.stex" ]
+source_file="res://assets/images/words/zebra.png"
+dest_files=[ "res://.import/zebra.png-891153b2ff1279f980886dd1474c2f62.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/eight.png-d0d08ba2d8fb943d4d16f7d02a3b0457.stex"
+path="res://.import/hus.png-9e6609e46dcc32daa9af231d9f10a9f3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/words/eight.png"
-dest_files=[ "res://.import/eight.png-d0d08ba2d8fb943d4d16f7d02a3b0457.stex" ]
+source_file="res://assets/images/words/hus.png"
+dest_files=[ "res://.import/hus.png-9e6609e46dcc32daa9af231d9f10a9f3.stex" ]
 
 [params]
 

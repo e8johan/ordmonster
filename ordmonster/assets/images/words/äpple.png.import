@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/three.png-b5ad1ad0e2a43da07d1c1c7a48d64aaa.stex"
+path="res://.import/äpple.png-5a5a917558c2f6cb08d58bdb2e771f81.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/words/three.png"
-dest_files=[ "res://.import/three.png-b5ad1ad0e2a43da07d1c1c7a48d64aaa.stex" ]
+source_file="res://assets/images/words/äpple.png"
+dest_files=[ "res://.import/äpple.png-5a5a917558c2f6cb08d58bdb2e771f81.stex" ]
 
 [params]
 

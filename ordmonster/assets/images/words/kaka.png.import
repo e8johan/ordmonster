@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/five.png-e5912b5ecd64c44a911cdf1d64d5acd9.stex"
+path="res://.import/kaka.png-ee5df781cacb21d0a1cedcf3e6b640bf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/words/five.png"
-dest_files=[ "res://.import/five.png-e5912b5ecd64c44a911cdf1d64d5acd9.stex" ]
+source_file="res://assets/images/words/kaka.png"
+dest_files=[ "res://.import/kaka.png-ee5df781cacb21d0a1cedcf3e6b640bf.stex" ]
 
 [params]
 

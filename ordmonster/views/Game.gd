@@ -29,7 +29,7 @@ func _ready() -> void:
 func initialize_game() -> void:
     words = WordDb.pick_words(5)
     for i in range(words.size()):
-        text.append(true)
+        text.append(false)
     
 func start_game() -> void:
     _no_of_mistakes = 0
@@ -46,7 +46,7 @@ func _next_word() -> void:
     
     $MarginContainer/VBoxContainer/KeyboardContainer/Keyboard2x2.isText = text[0]
     $MarginContainer/VBoxContainer/KeyboardContainer/Keyboard3x3.isText = text[0]
-    $MarginContainer/VBoxContainer/Control/TargetButton.isText = text[0] # TODO invert
+    $MarginContainer/VBoxContainer/Control/TargetButton.isText = !text[0]
     text.remove(0)
     
     var ow3 := WordDb.pick_other_words(3, _current_word)

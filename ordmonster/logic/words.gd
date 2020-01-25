@@ -3,6 +3,10 @@ class_name Words
 
 var _words : Array = Array()
 
+# Words are extracted from the file names in assets/images/words/*.png.
+# The words are then fed to the translation system as WORD_foo, where foo would be from foo.png.
+# The reason for this is that non-ascii characters are not supported among the assets.
+
 func _init() -> void:
     var dir = Directory.new()
     if dir.open("res://assets/images/words") == OK:
@@ -63,10 +67,15 @@ func _pick_words(no_of_words : int, excluded_index : int) -> Array:
     return res
     
 func format_word(word : String, upper : bool) -> String:
+    var w = tr("WORD_" + word)
+    
     if upper:
-        return word.to_upper()
+        return w.to_upper()
     else:
-        return word.to_upper().left(1) + word.to_lower().right(1)
+        return w.to_upper().left(1) + w.to_lower().right(1)
+
+func path_from_word(word : String) -> String:
+    return "res://assets/images/words/" + word.to_lower() + ".png"
 
 func print_words() -> void:
     print(_words)

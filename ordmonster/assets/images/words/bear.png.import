@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/banan.png-ff48b84b5862a899a01149998386e59f.stex"
+path="res://.import/bear.png-42cbe472f650951302c367ece1ad9d73.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/words/banan.png"
-dest_files=[ "res://.import/banan.png-ff48b84b5862a899a01149998386e59f.stex" ]
+source_file="res://assets/images/words/bear.png"
+dest_files=[ "res://.import/bear.png-42cbe472f650951302c367ece1ad9d73.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mus.png-6874eefbcdb6bf63c54002ff5f543948.stex"
+path="res://.import/monkey.png-ab990320001ab6ffd1a1cd32c25fa632.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/words/mus.png"
-dest_files=[ "res://.import/mus.png-6874eefbcdb6bf63c54002ff5f543948.stex" ]
+source_file="res://assets/images/words/monkey.png"
+dest_files=[ "res://.import/monkey.png-ab990320001ab6ffd1a1cd32c25fa632.stex" ]
 
 [params]
 

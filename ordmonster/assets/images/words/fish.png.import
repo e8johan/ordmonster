@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/räv.png-7c9dd74441609ee90a8ac7f783bd86da.stex"
+path="res://.import/fish.png-f8ccff00a707b64c818d7b01e06dd0a6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/words/räv.png"
-dest_files=[ "res://.import/räv.png-7c9dd74441609ee90a8ac7f783bd86da.stex" ]
+source_file="res://assets/images/words/fish.png"
+dest_files=[ "res://.import/fish.png-f8ccff00a707b64c818d7b01e06dd0a6.stex" ]
 
 [params]
 

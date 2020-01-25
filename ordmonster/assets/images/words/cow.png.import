@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/myra.png-8020e6135a39b32b6be75be62a3b57d6.stex"
+path="res://.import/cow.png-1de2816330ad67b165d85878e43106b5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/words/myra.png"
-dest_files=[ "res://.import/myra.png-8020e6135a39b32b6be75be62a3b57d6.stex" ]
+source_file="res://assets/images/words/cow.png"
+dest_files=[ "res://.import/cow.png-1de2816330ad67b165d85878e43106b5.stex" ]
 
 [params]
 

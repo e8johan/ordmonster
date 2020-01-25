@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/apa.png-369d3751d970c0010eab34cc384e877e.stex"
+path="res://.import/seal.png-b7cf1abcd4d2d27e20edad7bbb605ccf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/words/apa.png"
-dest_files=[ "res://.import/apa.png-369d3751d970c0010eab34cc384e877e.stex" ]
+source_file="res://assets/images/words/seal.png"
+dest_files=[ "res://.import/seal.png-b7cf1abcd4d2d27e20edad7bbb605ccf.stex" ]
 
 [params]
 

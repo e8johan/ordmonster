@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/val.png-0978960337c081ad32c4a025fb3e37b5.stex"
+path="res://.import/pig.png-23b41c9ba6b1ab79cac22ef4bcf3ddc5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/words/val.png"
-dest_files=[ "res://.import/val.png-0978960337c081ad32c4a025fb3e37b5.stex" ]
+source_file="res://assets/images/words/pig.png"
+dest_files=[ "res://.import/pig.png-23b41c9ba6b1ab79cac22ef4bcf3ddc5.stex" ]
 
 [params]
 

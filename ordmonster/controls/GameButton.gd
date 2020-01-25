@@ -16,7 +16,7 @@ func _set_is_upper(value : bool) -> void:
 func _set_word(value : String) -> void:
     word = value
     _update_text()
-    $MarginContainer/QuizImage.texture = load("res://assets/images/words/" + word.to_lower() + ".png")
+    $MarginContainer/QuizImage.texture = load(WordDb.path_from_word(word))
 
 func _update_text() -> void:
     $QuizText.text = WordDb.format_word(word, isUpper)

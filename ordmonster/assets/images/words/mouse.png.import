@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/groda.png-80c0b196dbfdcf73902d143d9eb8b596.stex"
+path="res://.import/mouse.png-f8751fa45338107a5ceafb97c5fe0540.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/words/groda.png"
-dest_files=[ "res://.import/groda.png-80c0b196dbfdcf73902d143d9eb8b596.stex" ]
+source_file="res://assets/images/words/mouse.png"
+dest_files=[ "res://.import/mouse.png-f8751fa45338107a5ceafb97c5fe0540.stex" ]
 
 [params]
 

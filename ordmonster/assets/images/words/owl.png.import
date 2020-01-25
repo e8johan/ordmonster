@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ko.png-40b534ca9f0a55a7e322a04cb6d990a1.stex"
+path="res://.import/owl.png-4a192033e48f813101b51de1b5891b4c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/words/ko.png"
-dest_files=[ "res://.import/ko.png-40b534ca9f0a55a7e322a04cb6d990a1.stex" ]
+source_file="res://assets/images/words/owl.png"
+dest_files=[ "res://.import/owl.png-4a192033e48f813101b51de1b5891b4c.stex" ]
 
 [params]
 

@@ -29,7 +29,7 @@ func _ready() -> void:
 func initialize_game() -> void:
     words = WordDb.pick_words(5)
     for i in range(words.size()):
-        text.append(false)
+        text.append(true)
     
 func start_game() -> void:
     _no_of_mistakes = 0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/buss.png-df87a2c359cbf94ae8d7656564f12177.stex"
+path="res://.import/ant.png-90c868f21d2f22e326c5c01742586f5d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/words/buss.png"
-dest_files=[ "res://.import/buss.png-df87a2c359cbf94ae8d7656564f12177.stex" ]
+source_file="res://assets/images/words/ant.png"
+dest_files=[ "res://.import/ant.png-90c868f21d2f22e326c5c01742586f5d.stex" ]
 
 [params]
 

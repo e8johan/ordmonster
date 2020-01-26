@@ -6,6 +6,9 @@ var _current_view : int = -1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+    # This is on purpose. The word collection is only guaranteed to make sense in Swedish.
+    TranslationServer.set_locale("sv")
+    
     _show_view(MENU)
 
 func _notification(what: int) -> void:

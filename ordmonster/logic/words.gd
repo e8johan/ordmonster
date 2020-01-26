@@ -8,14 +8,19 @@ var _words : Array = Array()
 # The reason for this is that non-ascii characters are not supported among the assets.
 
 func _init() -> void:
-    var dir = Directory.new()
-    if dir.open("res://assets/images/words") == OK:
-        dir.list_dir_begin()
-        var filename = dir.get_next()
-        while (filename != ""):
-            if filename.ends_with(".png"):
-                _words.append(filename.left(filename.length()-4))
-            filename = dir.get_next()
+    if OS.get_name() == "Android":
+        # TODO This is a really ugly HACK
+        _words = ["ant", "apple", "ball", "banana", "bear", "book", "bus", "cake", "car", "cow", "fish", "fox", "frog", "house", "melon", "monkey", "mouse", "owl", "pig", "seal", "sheep", "snake", "tiger", "train", "whale", "zebra"]
+    else:
+        var dir = Directory.new()
+        if dir.open("res://assets/images/words") == OK:
+            dir.list_dir_begin()
+            var filename = dir.get_next()
+            while (filename != ""):
+                if filename.ends_with(".png"):
+                    _words.append(filename.left(filename.length()-4))
+                filename = dir.get_next()
+
 
 func pick_words(no_of_words : int) -> Array:
     return _pick_words(no_of_words, -1)

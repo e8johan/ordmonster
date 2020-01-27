@@ -8,7 +8,8 @@ RESULT_RIGHT,rätt,right
 RESULT_TIME,Tid,Time
 RESULT_NO_TIME,ingen tid,no time
 SETTINGS_GAMEMODES,Spellägen,Game Modes
-SETTINGS_KEYS,Antal alternativ,No of Alternatives
+SETTINGS_NO_OF_KEYS,Antal alternativ,No of Alternatives
+SETTINGS_CAPS,STORA eller Blandade,LARGE or Mixed
 SETTINGS_NO_OF_EXERCISES,Antal övningar,No of Exercises
 MENU_RESULTS,Resultat,Results
 MENU_SETTINGS,Inställningar,Settings

@@ -34,19 +34,16 @@ func _ready() -> void:
             $MarginContainer/VBoxContainer/HBoxContainer2/P49Check.pressed = false
         p = f.get_var()
         if p == 1:
-            $MarginContainer/VBoxContainer/HBoxContainer4/CapsCheck.pressed = true
-            $MarginContainer/VBoxContainer/HBoxContainer4/MixedCheck.pressed = false
+            _on_CapsCheck_pressed()
         else:
-            $MarginContainer/VBoxContainer/HBoxContainer4/CapsCheck.pressed = false
-            $MarginContainer/VBoxContainer/HBoxContainer4/MixedCheck.pressed = true
+            _on_MixedCheck_pressed()
         f.close()
     else:        
         _set_no_of_exercises(10)
         _on_WP2PWCheck_pressed()
         $MarginContainer/VBoxContainer/HBoxContainer2/W49Check.pressed = false
         $MarginContainer/VBoxContainer/HBoxContainer2/P49Check.pressed = true
-        $MarginContainer/VBoxContainer/HBoxContainer4/CapsCheck.pressed = false
-        $MarginContainer/VBoxContainer/HBoxContainer4/MixedCheck.pressed = true
+        _on_MixedCheck_pressed()
 
     _on_W49Check_toggled($MarginContainer/VBoxContainer/HBoxContainer2/W49Check.pressed)
     _on_P49Check_toggled($MarginContainer/VBoxContainer/HBoxContainer2/P49Check.pressed)

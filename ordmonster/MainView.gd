@@ -43,6 +43,7 @@ func _show_view(v) -> void:
         SETTINGS:
             $Settings.visible = true
         GAME:
+            $Game.isUpper = $Settings.caps
             $Game.initialize_game($Settings.no_of_exercises, $Settings.w2p, $Settings.p2w, $Settings.manyW, $Settings.manyP)
             $Game.start_game()
             $Game.visible = true

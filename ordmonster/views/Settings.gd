@@ -7,6 +7,7 @@ var w2p : bool = true
 var p2w : bool = true
 var manyP : bool = true
 var manyW : bool = false
+var caps : bool = true
 
 func _ready() -> void:
     var f = File.new()
@@ -31,12 +32,21 @@ func _ready() -> void:
             $MarginContainer/VBoxContainer/HBoxContainer2/P49Check.pressed = true
         else:
             $MarginContainer/VBoxContainer/HBoxContainer2/P49Check.pressed = false
+        p = f.get_var()
+        if p == 1:
+            $MarginContainer/VBoxContainer/HBoxContainer4/CapsCheck.pressed = true
+            $MarginContainer/VBoxContainer/HBoxContainer4/MixedCheck.pressed = false
+        else:
+            $MarginContainer/VBoxContainer/HBoxContainer4/CapsCheck.pressed = false
+            $MarginContainer/VBoxContainer/HBoxContainer4/MixedCheck.pressed = true
         f.close()
     else:        
         _set_no_of_exercises(10)
         _on_WP2PWCheck_pressed()
         $MarginContainer/VBoxContainer/HBoxContainer2/W49Check.pressed = false
         $MarginContainer/VBoxContainer/HBoxContainer2/P49Check.pressed = true
+        $MarginContainer/VBoxContainer/HBoxContainer4/CapsCheck.pressed = false
+        $MarginContainer/VBoxContainer/HBoxContainer4/MixedCheck.pressed = true
 
     _on_W49Check_toggled($MarginContainer/VBoxContainer/HBoxContainer2/W49Check.pressed)
     _on_P49Check_toggled($MarginContainer/VBoxContainer/HBoxContainer2/P49Check.pressed)
@@ -51,14 +61,18 @@ func _on_BackButton_pressed() -> void:
         f.store_var(1)
     else:
         f.store_var(2)
-        if $MarginContainer/VBoxContainer/HBoxContainer2/W49Check.pressed:
-            f.store_var(1)
-        else:
-            f.store_var(0)
-        if $MarginContainer/VBoxContainer/HBoxContainer2/P49Check.pressed:
-            f.store_var(1)
-        else:
-            f.store_var(0)
+    if $MarginContainer/VBoxContainer/HBoxContainer2/W49Check.pressed:
+        f.store_var(1)
+    else:
+        f.store_var(0)
+    if $MarginContainer/VBoxContainer/HBoxContainer2/P49Check.pressed:
+        f.store_var(1)
+    else:
+        f.store_var(0)
+    if $MarginContainer/VBoxContainer/HBoxContainer4/CapsCheck.pressed:
+        f.store_var(1)
+    else:
+        f.store_var(0)
     f.close()
     
     emit_signal("back_clicked")
@@ -113,3 +127,13 @@ func _set_no_of_exercises(noe : int) -> void:
         noe = WordDb.count()
     no_of_exercises = noe
     $MarginContainer/VBoxContainer/HBoxContainer3/ExercisesLabel.text = str(noe)
+    
+func _on_CapsCheck_pressed() -> void:
+    $MarginContainer/VBoxContainer/HBoxContainer4/CapsCheck.pressed = true
+    $MarginContainer/VBoxContainer/HBoxContainer4/MixedCheck.pressed = false
+    caps = true
+
+func _on_MixedCheck_pressed() -> void:
+    $MarginContainer/VBoxContainer/HBoxContainer4/CapsCheck.pressed = false
+    $MarginContainer/VBoxContainer/HBoxContainer4/MixedCheck.pressed = true
+    caps = false

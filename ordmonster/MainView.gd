@@ -68,4 +68,5 @@ func _on_Game_game_over(time, words, mistakes) -> void:
     $Results.time_seconds = time
     $Results.words = words
     $Results.mistakes = mistakes
+    $Results.update_view()
     _show_view(RESULT)

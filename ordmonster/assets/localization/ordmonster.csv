@@ -7,6 +7,9 @@ RESULT_FROM,av,of
 RESULT_RIGHT,rätt,right
 RESULT_TIME,Tid,Time
 RESULT_NO_TIME,ingen tid,no time
+SETTINGS_GAMEMODES,Spellägen,Game Modes
+SETTINGS_KEYS,Antal alternativ,No of Alternatives
+SETTINGS_NO_OF_EXERCISES,Antal övningar,No of Exercises
 MENU_RESULTS,Resultat,Results
 MENU_SETTINGS,Inställningar,Settings
 MENU_BACK,Tillbaka,Back

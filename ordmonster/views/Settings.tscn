@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://views/Settings.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/MS-large.tres" type="DynamicFont" id=2]
-[ext_resource path="res://controls/TextButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/fonts/MS-small.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/images/checkbox-background.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/checkbox-outline-background.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/w2p.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/p2w.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/wp2pw.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/4w.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/4p.png" type="Texture" id=10]
+[ext_resource path="res://controls/TextButton.tscn" type="PackedScene" id=11]
 
 [node name="Settings" type="Control"]
 anchor_right = 1.0
@@ -12,32 +20,194 @@ script = ExtResource( 1 )
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/margin_top = 20
-custom_constants/margin_bottom = 20
+custom_constants/margin_right = 3
+custom_constants/margin_top = 10
+custom_constants/margin_left = 3
+custom_constants/margin_bottom = 10
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-margin_top = 20.0
-margin_right = 640.0
-margin_bottom = 1004.0
-custom_constants/separation = 30
+margin_left = 3.0
+margin_top = 10.0
+margin_right = 637.0
+margin_bottom = 1186.0
+custom_constants/separation = 10
 
 [node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
-margin_right = 640.0
+margin_right = 634.0
 margin_bottom = 89.0
 custom_fonts/font = ExtResource( 2 )
 text = "MENU_SETTINGS"
 align = 1
 
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 99.0
+margin_right = 634.0
+margin_bottom = 139.0
+custom_fonts/font = ExtResource( 3 )
+text = "SETTINGS_NO_OF_EXERCISES"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 149.0
+margin_right = 634.0
+margin_bottom = 244.0
+
+[node name="MinusButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+margin_right = 95.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 95, 95 )
+focus_mode = 0
+custom_fonts/font = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "-"
+flat = true
+
+[node name="ExercisesLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 99.0
+margin_top = 3.0
+margin_right = 535.0
+margin_bottom = 92.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "###"
+align = 1
+
+[node name="PlusButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 539.0
+margin_right = 634.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 95, 95 )
+focus_mode = 0
+custom_fonts/font = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "+"
+flat = true
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 254.0
+margin_right = 634.0
+margin_bottom = 294.0
+custom_fonts/font = ExtResource( 3 )
+text = "SETTINGS_GAMEMODES"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 304.0
+margin_right = 634.0
+margin_bottom = 462.0
+custom_constants/separation = 5
+
+[node name="W2PCheck" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 158.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 150, 150 )
+focus_mode = 0
+custom_icons/checked = ExtResource( 4 )
+custom_icons/unchecked = ExtResource( 5 )
+enabled_focus_mode = 0
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/W2PCheck"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+stretch_mode = 4
+
+[node name="P2WCheck" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 163.0
+margin_right = 321.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 150, 150 )
+focus_mode = 0
+custom_icons/checked = ExtResource( 4 )
+custom_icons/unchecked = ExtResource( 5 )
+enabled_focus_mode = 0
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/P2WCheck"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+stretch_mode = 4
+
+[node name="WP2PWCheck" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 326.0
+margin_right = 484.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 150, 150 )
+focus_mode = 0
+custom_icons/checked = ExtResource( 4 )
+custom_icons/unchecked = ExtResource( 5 )
+enabled_focus_mode = 0
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/WP2PWCheck"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 8 )
+stretch_mode = 4
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 472.0
+margin_right = 634.0
+margin_bottom = 512.0
+custom_fonts/font = ExtResource( 3 )
+text = "SETTINGS_KEYS"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 522.0
+margin_right = 634.0
+margin_bottom = 680.0
+custom_constants/separation = 5
+
+[node name="W49Check" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_right = 158.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 150, 150 )
+focus_mode = 0
+custom_icons/checked = ExtResource( 5 )
+custom_icons/unchecked = ExtResource( 5 )
+enabled_focus_mode = 0
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/W49Check"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 9 )
+stretch_mode = 4
+
+[node name="P49Check" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 163.0
+margin_right = 321.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 150, 150 )
+focus_mode = 0
+custom_icons/checked = ExtResource( 5 )
+custom_icons/unchecked = ExtResource( 5 )
+enabled_focus_mode = 0
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/P49Check"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 10 )
+stretch_mode = 4
+
 [node name="SpacerControl" type="Control" parent="MarginContainer/VBoxContainer"]
-margin_top = 119.0
-margin_right = 640.0
-margin_bottom = 859.0
+margin_top = 690.0
+margin_right = 634.0
+margin_bottom = 1071.0
 size_flags_vertical = 3
 
-[node name="BackButton" parent="MarginContainer/VBoxContainer" instance=ExtResource( 3 )]
-margin_top = 889.0
-margin_right = 640.0
-margin_bottom = 984.0
+[node name="BackButton" parent="MarginContainer/VBoxContainer" instance=ExtResource( 11 )]
+margin_top = 1081.0
+margin_right = 634.0
+margin_bottom = 1176.0
 custom_fonts/font = ExtResource( 2 )
 text = "MENU_BACK"
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/MinusButton" to="." method="_on_MinusButton_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/PlusButton" to="." method="_on_PlusButton_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/W2PCheck" to="." method="_on_W2PCheck_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/P2WCheck" to="." method="_on_P2WCheck_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/WP2PWCheck" to="." method="_on_WP2PWCheck_pressed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer2/W49Check" to="." method="_on_W49Check_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer2/P49Check" to="." method="_on_P49Check_toggled"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]

@@ -109,7 +109,7 @@ func _on_P49Check_toggled(button_pressed: bool) -> void:
 func _set_no_of_exercises(noe : int) -> void:
     if noe < 1:
         noe = 1
-    if noe > 99:
-        noe = 99
+    if noe > WordDb.count():
+        noe = WordDb.count()
     no_of_exercises = noe
     $MarginContainer/VBoxContainer/HBoxContainer3/ExercisesLabel.text = str(noe)

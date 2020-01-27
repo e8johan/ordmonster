@@ -5,8 +5,10 @@ signal game_over(time, words, mistakes)
 export var words : Array
 export var text : Array
 
-export var manyKeys : bool setget _set_many_keys
 export var isUpper : bool setget _set_is_upper
+
+var _manyW : bool
+var _manyP : bool
 
 var _current_word : String
 var _no_of_words : int
@@ -26,10 +28,24 @@ func _ready() -> void:
     $MarginContainer/VBoxContainer/KeyboardContainer/Keyboard2x2.set_words(["one", "two", "three", "four"])
     $MarginContainer/VBoxContainer/KeyboardContainer/Keyboard3x3.set_words(["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"])
 
-func initialize_game() -> void:
-    words = WordDb.pick_words(5)
+func initialize_game(no_of_exercises : int, w2p : bool, p2w : bool, manyW : bool, manyP : bool) -> void:
+    assert(w2p or p2w)
+    
+    _manyW = manyW
+    _manyP = manyP
+    
+    words = WordDb.pick_words(no_of_exercises)
+    
+    var rng = RandomNumberGenerator.new()
+    rng.randomize()
     for i in range(words.size()):
-        text.append(true)
+        if w2p and p2w:
+            if rng.randi_range(0, 1) == 1:
+                text.append(true)
+            else:
+                text.append(false)
+        else:
+            text.append(p2w)
     
 func start_game() -> void:
     _no_of_mistakes = 0
@@ -47,6 +63,16 @@ func _next_word() -> void:
     $MarginContainer/VBoxContainer/KeyboardContainer/Keyboard2x2.isText = text[0]
     $MarginContainer/VBoxContainer/KeyboardContainer/Keyboard3x3.isText = text[0]
     $MarginContainer/VBoxContainer/Control/TargetButton.isText = !text[0]
+    if text[0]:
+        if _manyW:
+            _set_many_keys(true)
+        else:
+            _set_many_keys(false)
+    else:
+        if _manyP:
+            _set_many_keys(true)
+        else:
+            _set_many_keys(false)
     text.remove(0)
     
     var ow3 := WordDb.pick_other_words(3, _current_word)
@@ -57,8 +83,6 @@ func _next_word() -> void:
     $MarginContainer/VBoxContainer/HBoxContainer/ProgressLabel.text = str(_no_of_words - len(words)) + " / " + str(_no_of_words)
 
 func _set_many_keys(value : bool) -> void:
-    manyKeys = value
-    
     if value:
         $MarginContainer/VBoxContainer/KeyboardContainer.current_tab = 0
     else:

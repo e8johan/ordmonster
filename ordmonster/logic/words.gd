@@ -82,5 +82,8 @@ func format_word(word : String, upper : bool) -> String:
 func path_from_word(word : String) -> String:
     return "res://assets/images/words/" + word.to_lower() + ".png"
 
+func count() -> int:
+    return _words.size()
+
 func print_words() -> void:
     print(_words)
